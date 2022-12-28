@@ -43,11 +43,9 @@ const App: React.FC = () => {
     }
 
     if (destination.droppableId === "TodoList") {
-      console.log("woww", add);
       add.isDone = false;
       active.splice(destination.index, 0, add);
     } else {
-      console.log("woww", add);
       add.isDone = true;
       complete.splice(destination.index, 0, add);
     }

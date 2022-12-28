@@ -8,9 +8,10 @@
 .input__box {
     width: 100%;
     border-radius: 50px;
-    padding: 10px 20px;
+    padding: 10px 30px;
     font-size: 24px;
     border: none;
+    color: black;
     transition: 0.2s;
     box-shadow: inset 0 0 5px black;
     background-color: wheat;
@@ -32,4 +33,16 @@
     color: white;
     transition: 0.2s all;
     box-shadow: 0 0 10px black;
+}
+
+.input__submit:active {
+    transform: scale(0.8);
+    box-shadow: 0 0 5px black;
+}
+
+.todos {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    flex-wrap: wrap;
 }

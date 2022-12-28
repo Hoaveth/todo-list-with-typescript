@@ -16,7 +16,11 @@ const InputField = ({ todo, setTodo, handleAddTodo }: Props) => {
       className="input"
       onSubmit={(e) => {
         handleAddTodo(e);
-        inputRef.current?.blur();
+
+        if (inputRef.current !== null) {
+          inputRef.current.blur();
+          inputRef.current.value = "";
+        }
       }}
     >
       <input

@@ -1,6 +1,6 @@
 .input {
     display: flex;
-    width: 90%;
+    width: 95%;
     position: relative;
     align-items: center;
 }
@@ -40,20 +40,40 @@
     box-shadow: 0 0 5px black;
 }
 
+.container {
+    display: flex;
+    width: 95%;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 .todos {
     display: flex;
-    justify-content: space-evenly;
-    width: 90%;
-    flex-wrap: wrap;
+    width: 47.5%;
+    flex-direction: column;
+    padding: 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    background-color: #7D61BB;
+}
+
+.todos__heading {
+    font-size: 30px;
 }
 
 .todos__single {
     display: flex;
-    width: 29.5%;
     border-radius: 5px;
     padding: 20px;
     margin-top: 15px;
     background-color: #4A3280;
+    transition: 0.2s;
+}
+
+.todos__single:hover {
+    box-shadow: 0 0 5px black;
+    transform: scale(1.01);
 }
 
 .todos__single--text {
@@ -84,14 +104,10 @@
     color: gray;
 }
 
-
-
-@media (max-width: 1200px) {
-
-    .todos__single {
-        width: 40%;
-    }
+.remove {
+    background-color: #D44A42;
 }
+
 
 @media (max-width: 700px) {
     .input {
@@ -100,9 +116,16 @@
 
     .todos {
         width: 95%;
+        margin-bottom: 10px;
     }
 
     .todos__single {
-        width: 100%;
+        width: 92%;
+
+    }
+
+    .container {
+        width: 95%;
+        flex-direction: column;
     }
 }
